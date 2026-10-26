@@ -1051,11 +1051,11 @@ console.log(
  * whatever reaches the client is liable to be spoken.
  */
 const RESULT_FAILURES = {
-  error_during_execution: 'The turn failed part way through.',
-  error_max_turns: 'The turn ran too long and was stopped.',
-  error_max_budget_usd: 'The budget for this turn ran out.',
-  error_max_structured_output_retries: 'The answer could not be assembled.',
-  default: 'The turn ended without an answer.',
+  error_during_execution: 'Deu um problema no meio do caminho, chefe.',
+  error_max_turns: 'Isso demorou demais e eu parei, chefe.',
+  error_max_budget_usd: 'O limite de gasto dessa resposta acabou.',
+  error_max_structured_output_retries: 'Não consegui montar a resposta.',
+  default: 'Fiquei sem resposta dessa vez, chefe.',
 }
 
 wss.on('connection', (socket) => {
