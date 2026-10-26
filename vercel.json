@@ -1,0 +1,6 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "framework": "vite",
+  "buildCommand": "mkdir -p public/mediapipe && cp -R node_modules/@mediapipe/tasks-vision/wasm/. public/mediapipe/ && npm run build",
+  "outputDirectory": "dist"
+}
