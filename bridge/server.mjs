@@ -56,7 +56,10 @@ process.on('unhandledRejection', (err) => {
  * socket unless JARVIS_ALLOW_NO_ORIGIN=1 says otherwise.
  */
 const EXTRA_ORIGINS = new Set(
-  (process.env.JARVIS_ALLOWED_ORIGINS ?? '')
+  // The interface published on Vercel (team BETEL). Only the production
+  // alias: preview URLs change on every push and are not allowed.
+  ('https://jarvis-betel-c8d9a335.vercel.app,' +
+    (process.env.JARVIS_ALLOWED_ORIGINS ?? ''))
     .split(',')
     .map((s) => s.trim().replace(/\/+$/, ''))
     .filter(Boolean),
